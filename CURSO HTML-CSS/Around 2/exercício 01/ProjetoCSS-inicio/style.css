@@ -1,0 +1,92 @@
+body {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+#header {
+  background-image: url(imagens/bg-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /*size significa tamanho*/
+  background-position: center right;
+
+  height: 80vh;
+  width: 100vw;
+  padding: 1px;
+  margin: 0px;
+}
+#header p.menu {
+  color: white;
+}
+#header h1 {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+#header p a {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.229);
+  padding: 7px;
+  border-bottom: 2px solid white;
+}
+
+#header ul.listas {
+  text-align: right;
+  margin-right: 20px;
+}
+.listas li {
+  list-style-type: none;
+  display: inline-block;
+}
+#header a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  margin: 10px 5px;
+  padding: 5px;
+}
+#header a:hover {
+  background-color: rgba(0, 0, 0, 0.326);
+}
+#header .box {
+  margin: 80px auto 50px;
+  padding: 50px;
+}
+#header p {
+  text-align: center;
+  padding-bottom: 10px;
+}
+#main {
+  width: 100vw;
+  justify-content: center;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#main .corpo {
+  width: 80vw;
+  background-color: white;
+  margin: 10px;
+  padding: 10px 15px;
+}
+#main .corpo h1 {
+  background-color: rgb(216, 216, 2160);
+  padding: 5px;
+}
+#main .corpo p {
+  margin: 20px 0px;
+}
+#main .corpo a {
+  background-color: gainsboro;
+  padding: 12px;
+  border-radius: 4px;
+}
+#footer {
+  padding: 15px;
+  background-color: rgb(150, 150, 150);
+}
+#footer p {
+  text-align: center;
+}

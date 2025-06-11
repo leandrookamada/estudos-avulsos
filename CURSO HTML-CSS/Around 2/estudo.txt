@@ -1,0 +1,41 @@
+Trabalho com imagens:
+
+HTML: <img src:"..." alt="..."> 
+-> a tag "src" é para direcionar de onde se deve pegar essa imagem, se ela está dentro 
+    do arquivo, se ela está na  áquina, etc...
+-> A tag "alt" será uma o que vai aperecer caso a imagem não consiga ser carregada.
+    Dessa forma ele vai servir para exemplificar o material que contém naquela imagem. 
+    Além de isso ajudar o google a apresentar o seu site dependo da pesquisa (CEO).
+        ---- Caso a imagem não possua um texto, é melhor que se coloque "vazio",
+        do que apenas deixar o teg "alt" de fato vazia
+-> trazer a imagem por meio de html é indicado quando a imagem faz parte do material da 
+    da página, de modo que não seja uma estilização, mas sim um conteúdo.
+
+CSS: background-image: url(...);
+-> A tag "url", da mesma forma que "src" no HTML, é o endereço da imagem, 
+    o caminho para que ela seja encontrada.
+-> Trazer uma imagem por meio do CSS é aconselhavel quando essa imagem não tem um valor informatico 
+ou não carrega conteúdo, pelo contrario, ela vai servir apenas para a estilização da imagem.
+
+IMAGENS: 
+- imagens em bitsmap são formadas por pixels, tendedo a serem imagens mais pesadas que 
+as imagens vetoriais. O tamanho da imagem altera no "pesso" que ela vai ter em Kb.
+- imagens vetoriais são mais leves, são formadas por funções e não por pixels. 
+O tamanho da imagem não altera o "peso" que essa imagem vai ter em Kb
+
+TIPOS DE IMAGENS:
+-> .jpg/jpeg: Imagens jpg/jpeg são imagens bitsmap que vai comprimir bastante essa imagem, 
+perdendo qualidade, mas gerando imagens que consomem menos espasso (Kb);
+-> .png: As imagens em png tendem a ter um tanho um pouco menor. A sua vantagem é que pode 
+haver transparencia, diferente do jpg/jpeg, que todos os pixels devem ter cores;
+-> .gif: As imagens são bastantes leves, mas são mais adequados para imagens que possuem poucas cores. 
+Também pode haver transparencia, porém não é tanta quanto na png.
+-> .svg: As imagens em svg possuem um formato vetorial, ideal para logos, arquivos de texto, ou
+qualquer arquivo com poucas cores.
+-> .webp: Melhor que o png e jpg/jpeg, tem uma taxa de compressão maior que os dois sem 
+perder qualidade. Porém não possuem assistencia boa o suficiente para serem usados.
+-> .avif: Melhor que o png e jpg/jpeg, tem uma taxa de compressão maior que os dois sem 
+perder qualidade. Porém não possuem assistencia boa o suficiente para serem usados.
+
+                                TAG "FLOAT"
+ -> No uso da tag float, é como que se eu colocasse o conteiner em quesão fluando, de modo que tudo que esteja ao seu redor deva se adequar a ele

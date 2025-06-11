@@ -1,0 +1,134 @@
+/*  main:
+    -main_h1
+    -main_p
+    -main_div:
+        main_div_p1; p
+        main_div_p2; p
+        main_div_p3; p
+        main_div_p4; p
+        main_div_p5; p
+        main_div_p6; p
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+
+  /* Tags responsáveis pelas imagens que ficará de fundo na página */
+  background-image: url(imagens/bg-2.jpg); /* Url chamando imagem */
+  background-size: cover; /* Nessa tag, estou dizendo que o tamanho dessa imagem deve cobrir toda a tela(cover), se adequando ao tamanho dela. */
+  background-position: center; /* Estou dizendo onde a tag deve estar posicionada */
+  background-repeat: no-repeat; /* Caso a imagem seja maior que a tela, ela tende a se repetir (quando em cover), para preencher o tamanho total da tela. aqui estou dizendo que ela não deve se repetir*/
+
+  overflow-inline: hidden;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; /* Estou dizendo que ela o conteúdo dentro, deve se alinhar ao centro do eixo principal, que por causa do flex-diction column, é de cima para baixo*/
+  align-items: center; /* Estou dizendo que o conteúdo dentro dessa tag deve se alinhar ao centro do eixo secundário, que por causa do flex-direction column, é de cima para baixo*/
+}
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main_h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  padding-top: 50px;
+  letter-spacing: 1.5px;
+}
+.main_p {
+  background-color: rgb(65, 65, 65);
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.394);
+  padding: 10px;
+  margin: 20px;
+}
+.main_div {
+  background-color: white;
+  text-transform: capitalize;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+  width: 60vw;
+}
+.main_div p {
+  background-color: darkslategrey;
+  padding: 5px;
+}
+.main_div_p1 {
+  background-image: url(imagens/card_01.png);
+  background-size: contain;
+  height: 170px;
+  width: 250px;
+  margin: 17px 0 0;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+}
+.main_div_p2 {
+  background-image: url(imagens/card_02.jpg);
+  background-size: contain;
+  height: 170px;
+  width: 250px;
+  margin: 17px 0 0;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+}
+.main_div_p3 {
+  background-image: url(imagens/card_03.jpg);
+  background-size: contain;
+  height: 170px;
+  width: 250px;
+  margin: 17px 0 0;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+}
+.main_div_p4 {
+  background-image: url(imagens/card_04.jpg);
+  background-size: contain;
+  height: 170px;
+  width: 250px;
+  margin: 17px 0 17px;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+}
+.main_div_p5 {
+  background-image: url(imagens/card_05.jpg);
+  background-size: contain;
+  height: 170px;
+  width: 250px;
+  margin: 17px 0 17px;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+}
+.main_div_p6 {
+  background-image: url(imagens/card_01.png);
+  background-size: contain;
+  height: 170px;
+  width: 250px;
+  margin: 17px 0 17px;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+}

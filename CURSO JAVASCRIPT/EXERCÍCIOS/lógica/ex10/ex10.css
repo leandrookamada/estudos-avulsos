@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap");
+:root {
+  --color1: #111111; /* Cor de contraste */
+  --color2: #f8f7f3; /* Cor princial */
+  --color3: #4c0192; /* Textos */
+  --color4: #cffe00; /* Destaques e botôes */
+
+  --fonttitulo: "Special Gothic Expanded One", sans-serif;
+  --fonttexto: "Bebas Neue", sans-serif;
+  --fontsubtexto: "Oswald", sans-serif;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color1);
+  height: 100vh;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+.main_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+
+  min-width: 40vw;
+  min-height: 30vh;
+  padding: 1em;
+  gap: 2em;
+
+  background-color: var(--color3);
+  border-radius: 2em;
+}
+.main_section_article {
+  align-self: center;
+  margin-top: 2em;
+}
+.main_section_p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625em;
+}
+.main_section_p_input {
+  width: 20em;
+  height: 2em;
+  border-radius: 2em;
+  border: 2px solid var(--color1);
+}
+.main_section_p_input_button {
+  font-family: var(--fontsubtexto);
+  font-size: 1rem;
+  align-self: center;
+  width: 6em;
+}
+.main_div_h2 {
+  font-family: var(--fonttexto);
+  letter-spacing: 0.2rem;
+}
+.main_div li {
+  font-family: var(--fonttexto);
+  font-size: 1.5em;
+}
+.main_div button {
+  align-self: center;
+  background-color: var(--color4);
+  font-family: var(--fonttexto);
+  margin-left: 1em;
+  width: 3em;
+  border: 0px;
+  border-radius: 2em;
+  font-size: 0.8em;
+}

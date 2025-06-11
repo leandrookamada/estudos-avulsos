@@ -1,0 +1,124 @@
+Flexbox nada mais é que a propriedade displey com o valor flex aplicada aos elementos.
+a propriedade flexbox entra no container pai, onde os filhos passam a ser flex itens.
+é como se eu criasse uma caixa, nessa caixa tem 3 itens, quando eu faço essa caixa virar flex box, 
+os itens dentro dela viram flex itens 
+
+display:flex; significa que os filhos diretos desse container serão flex,- ele que vai alinhar e distribuir os filhos 
+display:flex;= flex container, que vai gerar flex items.
+
+-> QUALQUER COISA QUE ESTEJA DENTRO DO CONTAINER FILHO (FLEX ITEMS), NÃO RECEBE AUTOMATICAMENTE O VALOR FLEX.
+
+-> Quando se trabalha com os valores dentro de uma flexbox, o melhor é ultilizar a propriedade "gap", ao invés de margin
+
+                                                    TAGS PARA UM Flexbox
+
+1º wrap-direction = flex-flow
+flex-wrap = propriedade responsavel pela quebra ou não de linha -------------- OBS: linha(row), equivalem ao eixo y, enquanto a coluna(column) equivale ao eixo x.
+flex-direction = responsavel por direcionar os itens, podendo ser eles em coluna(column) ou linha(row)
+
+ATALHO= flex-flow= ele vai receber os dois comandos acima, tanto para envolver o conteúdo dentro da div(wrap), quando para direcionar o sendo do conteúdo, 
+se ele será em linha(row) ou em coluna(column);
+flex-flow: row wrap;
+
+2º justyfi-contet = MAIN-AXIS
+justify-content = essa tag tem como objetivo fazer o ajuste do container filho(flex-items). podendo ser:
+flex-start: Ele inicia na extremidade da esquerda;
+flex-end: Ele inicia na extremidade da direita; 
+center: ele se posiciona no centro do container pai;
+space-around: ele vai preencher o tamanho do container pai(flexbox);
+space-between: Ele vai alinha o primeiro e o último flex-items e dividir igualmente o tamanho interno entre eles - melhor para manter alinhado!!!
+space-elenly: Ele vai dividir de forma igual entre todo o centro da flexbox, diferente do between, que chega o mais próximo possivel das extremidades.
+
+3º align-items = CROSS-AXIS
+start
+end 
+center 
+stretch(padrão) = Esse faz com que o item preencha todo o valor do container(na vertical/ no eixo y)
+
+--------------------------OBS: existe um apropriedade semelhante ao align-itmes, que é a align-content, ambas possuem a mesma funcão, contudo!!!
+--------------------------O ALIGN-ITEMS SERVE PARA CONTAINER NA MESMA LINHA (OU SEJA, FLEX-WRAP:NOWRAP;)
+--------------------------ENQUANTO O ALIGN-CONTENT SERVE PARA CONTAINERS QUE VÃO, OU *PODEM* OCUPAR MAIS DE UMA LINHA (OU SEJA, FLEX-WRAP: WRAP;)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+CROSS AXIS E MAIN AXIS:
+-> Para melhor entendimendo, diremos que o main axis corresponde a ao eixo x e o cross axis ao eixo y. Contudo, isso pode varias conforme o 
+posicionamento do container!! por padrao os container recebem um flex-direction= row(isso é, direcionamento em linha), quando alteramos esse valor,
+alteramos o direcionamento do container, desse modo, se colococamos fkex-directon=column, o nosso main-axis passa a ser o eixo y enquanto o cross-axis
+passa a ser o eixo x. Além disso, se alteramos a direção deles (reverse), alteramos inicio e o fim deles (start and end).
+
+---> Mas para que isso serve?? serve pois:
+A propriedade justify-content sempre está relacionada com o MAIN-AXIS, QUE NÃO NECESSARIAMENTE VAI ESTÁR RELACIONADO AO EIXO Y(vai depender do direction)
+A propriedade aling-items sempre vai estar relacionada com o CROSS-AXIS, QUE NÃO NECESSARIAMENTEVAI ESTAR RELACIONADA AO EIXO X(vai depender do direction)
+
+fle-direction:
+row: main-axis(eixo x) e cross-axis(eixo y) - positivo ->
+column: main-axis(eixo y) e cross-axis (eixo x) - positivos ->
+row-reverse: main-axis(eixo x) e cross-axis(eixo y) - negativos <-
+column-reverse; main-axis(eixo y) e cross-axis(eixo x) - negativos <-
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+FLEX BASIS= A propriedade flex-basis sempre vai estár relacionado a largura da flex-items em relação ao main-axis.
+
+flex-gow: o flex grow vai trabalhar com o espaço sobrando (sempre em relação ao main-axis) e vai distribuir, EXTICANDO OS ELEMENTOS.
+ele recebe valores, ex: "fle-grow:1;"
+
+flex-shring: o flex shring é o contrario da flex grow, ele vai receber o espaço necessário (sempre em relação ao main-axis) para que os outros 
+flex items não diminuam quando o container tiver recebendo alteração de valor de altura ou largura 
+
+ATALHO = FLEX: (grow) (shring) (basis)px;
+
+main-axis = eixo principal                
+cross-axis = eixo secundário              
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+propriedades:
+
+-> ORDER: 0;  (vai dar a ordem dos flex items, por padrão se inicia por 0, mas tbm pode receber valores negativos)
+-> align-self ( vai alterar o valor apenas dos flex-items de forma individual)
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                        RESUMO:
+    -> displey: flex;  (transforma os container filhos em flex, ou seja, flex-items)
+
+
+
+    - flex-wrap: nowrap; (controla se os items - dentro de uma flexbox - devem ou não quebrar linha se o espaço não for suficiente)
+    - flex-direction: row; (controla a direção dos flex items, podendo ser em linhas verticais (row/linha), ou no sentido horizontal (column/coluna))
+    -> ATALHO flex-flow: row nowrap; (recebe as duas propriedades em uma só)
+
+    -> justify-content: start; (controla o ajuste do flex item dentro do container, sempre no sentido do eixo principal). 
+            Pode receber: start; end; center; space-around; space-between; space-evelyn.
+    -> aling-items: stretch; (Controla o ajuste do flex item dentro do container, sempre no sentido do eixo secundário) 
+            Podendo receber: Start; end; center; stretch(padrão, onde come todo o espaço)
+            OBS:Para linha que não se repetem! ou seja: "nowrap"
+    -> aling-content: stretch; (Controla o ajuste do flex item dentro do container, sempre no sentido do eixo secundário) 
+            Podendo receber: Start; end; center; stretch(padrão, onde come todo o espaço)
+            OBS:Para linha que se repetem! ou seja: "wrap"
+    
+    - flex-grow 0; (Controla o quanto um flex item vai aumentar para que os outros não sejam alterados quando o tamnho - no eixo principal- mudar.)
+    - flex-shring: 0; (Controla o quanto um flex item vai diminuir para que os outros não sejam alterados quando o tamanho - no eixo principal - mudar.)
+    - flex-basis: 0; (Contra o tamanho que um flex item vai receber -sempre no sentido do eixo principal-. Esse valor vai SEMPRE se sobressair.)
+    -> ATALHO; flex: (grow) (shring) (basis); 
+            OBS: vale lembrar que os valores de grow e shring são inteiros e equivalem a quantidade de flex items dentro do container.
+
+    
+    - order: 0; (Controla a ordem de um flex item específica)
+    - aling-self: start; (vai alterar o alinhamento de um flex item específico)

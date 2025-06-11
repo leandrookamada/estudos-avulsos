@@ -1,0 +1,16 @@
+body {
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98vw;
+  height: 97vh;
+}
+main {
+  height: 48.5vh;
+  width: 49vw;
+  background-color: aquamarine;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}

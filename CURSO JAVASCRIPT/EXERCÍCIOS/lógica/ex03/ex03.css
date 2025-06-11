@@ -1,0 +1,27 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+.main_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: yellowgreen;
+  padding: 3em;
+  margin: 2em;
+  gap: 0.625em;
+  border-radius: 1.1em;
+}
+.main_section_article p {
+  padding: 10px;
+}

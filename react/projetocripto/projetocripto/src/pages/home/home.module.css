@@ -1,0 +1,165 @@
+/*/////////////////////ESTRUTURA//////////////////////////////////*/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: var(--colortexto);
+}
+article {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 30em;
+  width: 50vw;
+
+  padding: 2em;
+  gap: 2.2em;
+  border-radius: 0.4em;
+
+  background-color: var(--colorcard);
+}
+/*//////////////////////FORMS/////////////////////////////////////*/
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-width: 30em;
+  width: 40vw;
+
+  gap: 1em;
+  padding: 2em;
+}
+input {
+  min-width: 80%;
+  padding: 1em;
+  border-radius: 0.4em;
+
+  border: 2px solid var(--colorborda);
+
+  color: var(--colortexto);
+  background-color: var(--colorbutton2);
+}
+button {
+  background-color: transparent;
+}
+/*//////////////////////TABELA////////////////////////////////////*/
+table {
+  border-collapse: separate;
+  border-spacing: 0 0.8em;
+  table-layout: fixed;
+
+  width: 100%;
+  table-layout: fixed;
+}
+thead {
+  width: 100%;
+  padding: 3em;
+}
+tbody {
+  padding: 1em;
+  background-color: var(--colorborda);
+}
+.imgSymbol {
+  height: 3em;
+  padding: 0.625em;
+  transition: all 500ms;
+  margin: auto;
+}
+.imgSymbol:hover {
+  transform: scale(1.5);
+  z-index: 99;
+}
+.td_imgSymbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.td_imgSymbol span {
+  text-align: start;
+}
+span {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
+}
+td:first-child,
+th:first-child {
+  border-radius: 8px 0px 0px 8px;
+}
+td:last-child,
+th:last-child {
+  border-radius: 0px 8px 8px 0px;
+}
+td,
+th {
+  padding: 1em;
+  text-align: center;
+}
+.loss {
+  color: red;
+}
+.win {
+  color: green;
+}
+/*/////////////////////////////BOTÃO/////////////////////////////*/
+.button {
+  background-color: var(--colorbutton2);
+  color: var(--colortexto);
+
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  margin-top: 1em;
+  padding: 0.625em;
+  border-radius: 8px;
+
+  border: 1px solid var(--colorborda);
+}
+/*///////////////////////////////////////////////////////////////*/
+/*/////////////////////////RESPANSIVIDADE////////////////////////*/
+
+@media screen and (max-width: 1000px) {
+  table {
+    border: 0px;
+  }
+  thead {
+    border: none;
+    height: auto;
+    margin: -1;
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    padding: 0;
+  }
+  .tbody_tr {
+    border-bottom: 1px solid var(--colorbutton2);
+    display: block;
+    margin-bottom: 0.8em;
+  }
+  td {
+    border-bottom: 1px solid var(--colorcard);
+    display: block;
+    text-align: right;
+  }
+  td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  td:first-child {
+    border-radius: 0;
+  }
+  td:last-child {
+    border-radius: 0px;
+  }
+}
