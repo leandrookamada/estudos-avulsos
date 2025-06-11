@@ -1,0 +1,27 @@
+# Ignorar dependências
+node_modules/
+.env
+dist/
+build/
+
+# Ignorar arquivos de logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignorar arquivos de configurações locais
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Ignorar pastas temporárias e caches
+.cache/
+.next/
+out/
+tmp/
+temp/
+
+# Ignorar arquivos do sistema
+*.swp
+*.swo
