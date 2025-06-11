@@ -1,0 +1,88 @@
+import { useState } from "react";
+interface UsuarioDados {
+  nome: string;
+  idade: number;
+}
+export default function Clicar() {
+  const [input, setInput] = useState("");
+  const [mensagem, setMensagem] = useState<string[]>([]);
+  const [idade, setIdade] = useState("");
+
+  const [dados, setDados] = useState<UsuarioDados>();
+  console.log(dados);
+
+  const [contador, setContador] = useState(0);
+
+  function somar() {
+    if (contador === 10) {
+      setContador(valorAtual => valorAtual + 2);
+      return;
+    }
+    setContador(valorAtual => valorAtual + 1);
+  }
+  function subtrair() {
+    if (contador === 0) {
+      return;
+    }
+    setContador(valorAtual => valorAtual - 1);
+  }
+
+  function calcularIdade(idade: number) {
+    return 2024 - idade;
+  }
+  function MostrarAlunos() {
+    const idadeNum = Number(idade);
+    const nascimento = calcularIdade(idadeNum);
+    if (input.trim() !== "" && idade !== "") {
+      setMensagem([
+        ...mensagem,
+        `Seja bem vindo, ${input} \n Você é de ${nascimento}`,
+      ]);
+    }
+    setDados({
+      nome: input,
+      idade: idadeNum,
+    });
+    setInput("");
+    setIdade("");
+  }
+  return (
+    <div>
+      <div>
+        <h1>Primeiros Botões</h1>
+        <input
+          placeholder="Digite seu nome:"
+          value={input}
+          onChange={e => setInput(e.target.value)}
+          onKeyDown={e => {
+            if (e.key === "Enter") {
+              MostrarAlunos();
+            }
+          }}
+        />
+        <input
+          placeholder="Digite sua idade:"
+          value={idade}
+          onChange={e => setIdade(e.target.value)}
+          onKeyDown={e => {
+            if (e.key === "Enter") {
+              MostrarAlunos();
+            }
+          }}
+        />
+        <button onClick={MostrarAlunos} className="botao">
+          Salvar
+        </button>
+        <hr />
+        {mensagem.map((mensagem, index) => (
+          <pre key={index}>{mensagem}</pre>
+        ))}
+      </div>
+      <div>
+        <button onClick={somar}>+</button>
+        <p className="contador">{contador}</p>
+        <button onClick={subtrair}>-</button>
+      </div>
+    </div>
+  );
+}

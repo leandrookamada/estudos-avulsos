@@ -1,0 +1,14 @@
+import { Alunos } from "./EX01/functionalunos";
+import { Header } from "./EX01/header";
+
+export default function App() {
+  return (
+    <div>
+      <Header header="Meu Primeiro Código REACT" />
+      <h1>Meu Primeiro Projeto.</h1>
+      <Alunos nome="Pedro" idade={20} />
+      <Alunos nome="Pedro" idade={20} />
+      <Alunos nome="Pedro" idade={20} />
+    </div>
+  );
+}

@@ -1,0 +1,12 @@
+ npm creat vite@latest  *nome do projeto/ou/sem nome*
+
+ cd *projeto*
+
+ npm install 
+
+ npm install react-router-dom
+ 
+ npm run dev 
+/////////////////////////////////////////////////////////////
+
+criar pastas ---> mkdir *nome da pasta
