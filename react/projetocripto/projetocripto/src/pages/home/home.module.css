@@ -44,6 +44,7 @@ input {
 }
 button {
   background-color: transparent;
+  margin-bottom: 10em;
 }
 /*//////////////////////TABELA////////////////////////////////////*/
 table {
@@ -81,6 +82,13 @@ tbody {
 .td_imgSymbol span {
   text-align: start;
 }
+tr {
+  display: flex;
+  justify-content: space-between;
+}
+td {
+  flex: 1;
+}
 span {
   font-weight: bold;
   white-space: nowrap;
@@ -88,6 +96,7 @@ span {
   text-overflow: ellipsis;
   display: inline-block;
   max-width: 100%;
+  flex: 0;
 }
 td:first-child,
 th:first-child {
