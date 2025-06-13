@@ -16,32 +16,26 @@ export function Detail() {
   const { Cripto } = useParams();
 
   // Hook para redirecionamento de rota
-  const navigate = useNavigate();
 
   // useEffect roda quando o componente monta ou quando `Cripto` muda
   useEffect(() => {
-    // Função assíncrona que busca os dados da moeda
     async function fetchData() {
-      // Se não existir um parâmetro, sai da função
       if (!Cripto) return;
 
-      // Busca os dados da API
       const data = await getCoin(Cripto);
 
-      // Se não veio dado válido, redireciona para a home
-      if (!data) {
-        navigate("/");
+      if (!data || !data.data) {
+        console.error("Moeda não encontrada ou erro ao buscar dados.");
         return;
       }
 
-      // Se tudo estiver certo, salva os dados da moeda no estado
+      console.log("Dados da moeda:", data.data); // <-- veja se chega aqui
+
       setCoinData(data.data);
     }
 
-    // Chama a função de busca
     fetchData();
-  }, [Cripto, navigate]); // Dependências do efeito
-
+  }, [Cripto]);
   // Renderização do componente
   return (
     <div>

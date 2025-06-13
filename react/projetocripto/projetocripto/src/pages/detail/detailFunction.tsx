@@ -11,7 +11,7 @@ export async function getCoin(id: string): Promise<ResponseData | null> {
   try {
     // Faz uma requisição à API usando o ID passado como parâmetro
     const response = await fetch(
-      `https://rest.coincap.io/v3/assets/${id}?apiKey=...`
+      `https://rest.coincap.io/v3/assets/${id}?apiKey=f39623714f320474e22e7723a6df67f6eb529f3a2cdc021e4b679cd409226d8b`
     );
 
     // Converte a resposta em JSON
@@ -19,6 +19,7 @@ export async function getCoin(id: string): Promise<ResponseData | null> {
 
     // Se vier um erro na resposta (por exemplo, moeda não encontrada), retorna null
     if ("error" in data) {
+      console.log("erro no detailFunction");
       return null;
     }
 
