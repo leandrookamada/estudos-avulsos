@@ -1,5 +1,5 @@
 /*/////////////////////ESTRUTURA//////////////////////////////////*/
-main {
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@ main {
 
   color: var(--colortexto);
 }
-article {
+.article {
   display: flex;
   flex-direction: column;
 
@@ -21,7 +21,7 @@ article {
   background-color: var(--colorcard);
 }
 /*//////////////////////FORMS/////////////////////////////////////*/
-form {
+.form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +32,7 @@ form {
   gap: 1em;
   padding: 2em;
 }
-input {
+.input {
   min-width: 80%;
   padding: 1em;
   border-radius: 0.4em;
@@ -42,12 +42,11 @@ input {
   color: var(--colortexto);
   background-color: var(--colorbutton2);
 }
-button {
+.button_search {
   background-color: transparent;
-  margin-bottom: 10em;
 }
 /*//////////////////////TABELA////////////////////////////////////*/
-table {
+.table {
   border-collapse: separate;
   border-spacing: 0 0.8em;
   table-layout: fixed;
@@ -55,11 +54,11 @@ table {
   width: 100%;
   table-layout: fixed;
 }
-thead {
+.thead {
   width: 100%;
   padding: 3em;
 }
-tbody {
+.tbody {
   padding: 1em;
   background-color: var(--colorborda);
 }
@@ -82,14 +81,14 @@ tbody {
 .td_imgSymbol span {
   text-align: start;
 }
-tr {
+.tr {
   display: flex;
   justify-content: space-between;
 }
-td {
+.td {
   flex: 1;
 }
-span {
+.span {
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
@@ -100,12 +99,13 @@ span {
 }
 td:first-child,
 th:first-child {
-  border-radius: 8px 0px 0px 8px;
+  border-radius: 8px 0px 0px 8px !important;
 }
 td:last-child,
 th:last-child {
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 0px 8px 8px 0px !important;
 }
+
 td,
 th {
   padding: 1em;
@@ -132,15 +132,16 @@ th {
   border-radius: 8px;
 
   border: 1px solid var(--colorborda);
+  margin-bottom: 10em;
 }
 /*///////////////////////////////////////////////////////////////*/
 /*/////////////////////////RESPANSIVIDADE////////////////////////*/
 
 @media screen and (max-width: 1000px) {
-  table {
+  .table {
     border: 0px;
   }
-  thead {
+  .thead {
     border: none;
     height: auto;
     margin: -1;
@@ -154,21 +155,21 @@ th {
     display: block;
     margin-bottom: 0.8em;
   }
-  td {
+  .td {
     border-bottom: 1px solid var(--colorcard);
     display: block;
     text-align: right;
   }
-  td::before {
+  .td::before {
     content: attr(data-label);
     float: left;
     font-weight: bolder;
     text-transform: uppercase;
   }
-  td:first-child {
+  .td:first-child {
     border-radius: 0;
   }
-  td:last-child {
+  .td:last-child {
     border-radius: 0px;
   }
 }

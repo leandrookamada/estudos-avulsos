@@ -37,36 +37,47 @@ export function Home() {
   }, [offSet]);
 
   return (
-    <main>
-      <article>
+    <main className={style.main}>
+      <article className={style.article}>
         {/* Formulário de busca de moedas */}
         <form
           className={style.form}
           onSubmit={e => handleSubmit(e, input, navigate)} // Envia o input ao buscar
         >
           <input
+            className={style.input}
             type="text"
             placeholder="Pesquisar Moedas..."
             value={input}
             onChange={e => setInput(e.target.value)} // Atualiza o estado do input em tempo real
           />
-          <button type="submit">
+          <button className={style.button_search} type="submit">
             <BsSearch size={30} color="#fff" /> {/* Ícone de lupa */}
           </button>
         </form>
 
         {/* Tabela de exibição das moedas */}
-        <table className={style.main_article_table}>
-          <thead>
+        <table className={style.table}>
+          <thead className={style.thead}>
             <tr className={style.thead_tr}>
-              <th scope="col">Moeda</th>
-              <th scope="col">Valor de Mercado</th>
-              <th scope="col">Preço</th>
-              <th scope="col">Volume</th>
-              <th scope="col">Mudança em 24h</th>
+              <th className={style.th} scope="col">
+                Moeda
+              </th>
+              <th className={style.th} scope="col">
+                Valor de Mercado
+              </th>
+              <th className={style.th} scope="col">
+                Preço
+              </th>
+              <th className={style.th} scope="col">
+                Volume
+              </th>
+              <th className={style.th} scope="col">
+                Mudança em 24h
+              </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className={style.tbody}>
             {/* Renderiza a lista de moedas caso exista */}
             {coins.length > 0 &&
               coins.map(item => (
@@ -92,13 +103,19 @@ export function Home() {
                   </td>
 
                   {/* Coluna de valor de mercado */}
-                  <td data-label="Valorde de mercado">{item.CompactedPrice}</td>
+                  <td className={style.td} data-label="Valorde de mercado">
+                    {item.CompactedPrice}
+                  </td>
 
                   {/* Coluna de preço */}
-                  <td data-label="preço">{item.FormatedPrice}</td>
+                  <td className={style.td} data-label="preço">
+                    {item.FormatedPrice}
+                  </td>
 
                   {/* Coluna de volume */}
-                  <td data-label="volume">{item.VolumePrice}</td>
+                  <td className={style.td} data-label="volume">
+                    {item.VolumePrice}
+                  </td>
 
                   {/* Coluna de mudança percentual em 24h */}
                   <td

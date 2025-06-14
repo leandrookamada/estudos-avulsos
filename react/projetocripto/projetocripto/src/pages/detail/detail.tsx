@@ -54,39 +54,44 @@ export function Detail() {
       {/* Exibe os dados formatados da moeda, se existirem */}
       {coinData && (
         <div>
-          <table className={style.table}>
-            <thead className={style.thead}>
-              <tr className={style.thead_tr}>
-                <th scope="col" className={style.thead_th}>
-                  Nome:{" "}
-                </th>
-                <th scope="col" className={style.thead_th}>
-                  Preço:{" "}
-                </th>
-                <th scope="col" className={style.thead_th}>
-                  Preço Compacto:
-                </th>
-                <th scope="col" className={style.thead_th}>
-                  Volume 24h:
-                </th>
-                <th scope="col" className={style.thead_th}>
-                  Mudança em 24h:
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className={style.tbody_tr}>
-                <td className={style.tbody_td}>{coinData.name}</td>
-                <td className={style.tbody_td}>{coinData.FormatedPrice}</td>
-                <td className={style.tbody_td}>{coinData.CompactedPrice}</td>
-                <td className={style.tbody_td}>{coinData.VolumePrice}</td>
-                <td className={style.tbody_td}>
-                  {" "}
-                  <span> {Number(coinData.changePercent24Hr).toFixed(2)}%</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <main className={style.main}>
+            <table className={style.table}>
+              <thead className={style.thead}>
+                <tr className={style.thead_tr}>
+                  <th scope="col" className={style.thead_th}>
+                    Nome:{" "}
+                  </th>
+                  <th scope="col" className={style.thead_th}>
+                    Preço:{" "}
+                  </th>
+                  <th scope="col" className={style.thead_th}>
+                    Preço Compacto:
+                  </th>
+                  <th scope="col" className={style.thead_th}>
+                    Volume 24h:
+                  </th>
+                  <th scope="col" className={style.thead_th}>
+                    Mudança em 24h:
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className={style.tbody_tr}>
+                  <td className={style.tbody_td}>{coinData.name}</td>
+                  <td className={style.tbody_td}>{coinData.FormatedPrice}</td>
+                  <td className={style.tbody_td}>{coinData.CompactedPrice}</td>
+                  <td className={style.tbody_td}>{coinData.VolumePrice}</td>
+                  <td className={style.tbody_td}>
+                    {" "}
+                    <span>
+                      {" "}
+                      {Number(coinData.changePercent24Hr).toFixed(2)}%
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </main>
         </div>
       )}
     </div>
