@@ -1,3 +1,15 @@
-main {
-  min-width: 60vw;
+body {
+  height: 100%;
+  width: 99vw;
+}
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 99.5vw;
+}
+.main {
+  background-color: var(--colorborda);
+  padding: 2em;
 }

@@ -7,6 +7,7 @@ import { useParams, useNavigate } from "react-router-dom";
 // Tipagem da moeda, vinda do módulo home
 import type { CoinsProps } from "../home/homeTypes";
 import style from "./detail.module.css";
+
 // Componente principal da página de detalhe da moeda
 export function Detail() {
   // Estado para armazenar os dados da moeda buscada
@@ -50,47 +51,39 @@ export function Detail() {
   // Renderização do componente
   return (
     <div>
-      <h1>Você está na página de uma moeda {Cripto}</h1>
-      {/* Exibe os dados formatados da moeda, se existirem */}
       {coinData && (
-        <div>
+        <div className={style.div}>
           <main className={style.main}>
-            <table className={style.table}>
-              <thead className={style.thead}>
-                <tr className={style.thead_tr}>
-                  <th scope="col" className={style.thead_th}>
-                    Nome:{" "}
-                  </th>
-                  <th scope="col" className={style.thead_th}>
-                    Preço:{" "}
-                  </th>
-                  <th scope="col" className={style.thead_th}>
-                    Preço Compacto:
-                  </th>
-                  <th scope="col" className={style.thead_th}>
-                    Volume 24h:
-                  </th>
-                  <th scope="col" className={style.thead_th}>
-                    Mudança em 24h:
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className={style.tbody_tr}>
-                  <td className={style.tbody_td}>{coinData.name}</td>
-                  <td className={style.tbody_td}>{coinData.FormatedPrice}</td>
-                  <td className={style.tbody_td}>{coinData.CompactedPrice}</td>
-                  <td className={style.tbody_td}>{coinData.VolumePrice}</td>
-                  <td className={style.tbody_td}>
-                    {" "}
-                    <span>
-                      {" "}
-                      {Number(coinData.changePercent24Hr).toFixed(2)}%
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <img
+              className={style.img}
+              src={`https://assets.coincap.io/assets/icons/${coinData?.symbol.toLocaleLowerCase()}2@2x.png`}
+              alt=""
+            />
+            <section>
+              <h1>
+                {coinData.name} | {coinData.symbol}
+              </h1>
+              <div>
+                <span>Posição no ranking</span>
+                <p>{coinData.rank}º</p>
+              </div>
+              <div>
+                <span>Preço:</span>
+                <p>{coinData.CompactedPrice}</p>
+              </div>
+              <div>
+                <span>Volume 24h:</span>
+                <p
+                  className={
+                    Number(coinData.changePercent24Hr) > 0
+                      ? style.profit
+                      : style.loss
+                  }
+                >
+                  {Number(coinData.changePercent24Hr).toFixed(2)}
+                </p>
+              </div>
+            </section>
           </main>
         </div>
       )}
