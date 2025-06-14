@@ -43,36 +43,40 @@ export function Detail() {
   if (loading) {
     return (
       <div className={style.div_loading}>
-        <h4>Carregando</h4>
+        <h4 className={style.h4_loading}>Carregando...</h4>
       </div>
     );
   }
 
   // Renderização do componente
   return (
-    <div>
+    <div className={style.div}>
       {coinData && (
         <div className={style.div}>
           <main className={style.main}>
-            <img
-              className={style.img}
-              src={`https://assets.coincap.io/assets/icons/${coinData?.symbol.toLocaleLowerCase()}2@2x.png`}
-              alt=""
-            />
-            <section>
-              <h1>
+            <section className={style.section}>
+              <img
+                className={style.img}
+                src={`https://assets.coincap.io/assets/icons/${coinData?.symbol.toLocaleLowerCase()}2@2x.png`}
+                alt=""
+              />
+              <h1 className={style.h1}>
                 {coinData.name} | {coinData.symbol}
               </h1>
-              <div>
-                <span>Posição no ranking</span>
-                <p>{coinData.rank}º</p>
+              <div className={style.div2}>
+                <span className={style.span}>Posição no ranking:</span>
+                <p className={style.p}>{coinData.rank}º</p>
               </div>
-              <div>
-                <span>Preço:</span>
-                <p>{coinData.CompactedPrice}</p>
+              <div className={style.div2}>
+                <span className={style.span}>Preço:</span>
+                <p className={style.p}>{coinData.CompactedPrice}</p>
               </div>
-              <div>
-                <span>Volume 24h:</span>
+              <div className={style.div2}>
+                <span className={style.span}>Volume:</span>
+                <p className={style.p}>{coinData.VolumePrice}</p>
+              </div>
+              <div className={style.div2}>
+                <span className={style.span}>Volume 24h:</span>
                 <p
                   className={
                     Number(coinData.changePercent24Hr) > 0
@@ -80,9 +84,20 @@ export function Detail() {
                       : style.loss
                   }
                 >
-                  {Number(coinData.changePercent24Hr).toFixed(2)}
+                  {Number(coinData.changePercent24Hr).toFixed(2)}%
                 </p>
               </div>
+              {coinData.explorer && (
+                <button className={style.button}>
+                  <a
+                    href={coinData.explorer}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Saiba mais
+                  </a>
+                </button>
+              )}
             </section>
           </main>
         </div>

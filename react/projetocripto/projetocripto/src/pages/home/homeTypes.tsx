@@ -11,7 +11,7 @@ export interface CoinsProps {
   priceUsd: String; // Preço atual
   changePercent24Hr: String; // Variação em 24h
   vwap24Hr: String; // Preço médio ponderado por volume
-  explorer: String; // Link para explorar mais sobre a moeda
+  explorer: string; // Link para explorar mais sobre a moeda
 
   // Campos adicionais criados no front-end com valores já formatados:
   CompactedPrice?: String; // Preço formatado (ex: $2.4M)
