@@ -1,0 +1,18 @@
+0000000000000000000000000000000000000000 30b0ddcff85232fa4634cbbb3c92cfa61c409ac8 leandrookamada <leandrolobatokmd@gmail.com> 1749651786 -0300	commit (initial): postagem de todo material de estudo
+30b0ddcff85232fa4634cbbb3c92cfa61c409ac8 30b0ddcff85232fa4634cbbb3c92cfa61c409ac8 leandrookamada <leandrolobatokmd@gmail.com> 1749652411 -0300	reset: moving to HEAD
+30b0ddcff85232fa4634cbbb3c92cfa61c409ac8 d339610018ec4c14365c7bd06d54c807138a21c6 leandrookamada <leandrolobatokmd@gmail.com> 1749654584 -0300	commit: Adiciona projeto React Cripto e resolve problemas com submódulo
+d339610018ec4c14365c7bd06d54c807138a21c6 8c9ed8e106b6fb73a6ea6399b8a35773ff553d2c leandrookamada <leandrolobatokmd@gmail.com> 1749654626 -0300	commit: Adiciona projeto React Cripto e resolve problemas com submódulo
+8c9ed8e106b6fb73a6ea6399b8a35773ff553d2c 59b9b0a67001d0a0195853019a4ad7c72b6b5ffe leandrookamada <leandrolobatokmd@gmail.com> 1749821114 -0300	commit: subundo comentários do projetoCripto
+59b9b0a67001d0a0195853019a4ad7c72b6b5ffe 42a7d9d51c43c1985b705ab4279ddabf4c85faf2 leandrookamada <leandrolobatokmd@gmail.com> 1749821239 -0300	commit: corrigindo o .gitignore
+42a7d9d51c43c1985b705ab4279ddabf4c85faf2 0fd1fdff10d4d40f5240a4a2a9c44ca2e5ca4c7e leandrookamada <leandrolobatokmd@gmail.com> 1749822244 -0300	commit: apagando o .gitmodules
+0fd1fdff10d4d40f5240a4a2a9c44ca2e5ca4c7e fe743635b568bac75a0106fb618d76918a464172 leandrookamada <leandrolobatokmd@gmail.com> 1749847853 -0300	commit: corrigindo a chave de API
+fe743635b568bac75a0106fb618d76918a464172 d081a7d0564b113c000c68034d498736a44b43c1 leandrookamada <leandrolobatokmd@gmail.com> 1749853805 -0300	commit: atualização 01 do detalhamento deas moedas (react/projetocripto)
+d081a7d0564b113c000c68034d498736a44b43c1 d3ca87f4edb80a3f16a399c4498a84a9d1e00e1b leandrookamada <leandrolobatokmd@gmail.com> 1749919234 -0300	commit: atualização temporaria do home.modules.css e home.tsx
+d3ca87f4edb80a3f16a399c4498a84a9d1e00e1b 0b70ee8f404e2477024b178c5ab0a4e2ab00f3c3 leandrookamada <leandrolobatokmd@gmail.com> 1749924231 -0300	commit: atulização 03 no estilo do detalhamento
+0b70ee8f404e2477024b178c5ab0a4e2ab00f3c3 2b3bb5abac628f207155e4043fbceb6e124e1dc4 leandrookamada <leandrolobatokmd@gmail.com> 1749939760 -0300	commit: finalização do projeto cripto
+2b3bb5abac628f207155e4043fbceb6e124e1dc4 7551947777ca018b9289497263ec973a391a37f4 leandrookamada <leandrolobatokmd@gmail.com> 1749953765 -0300	commit: primeiro commit
+7551947777ca018b9289497263ec973a391a37f4 4b1d1955e7e57da455cb460d4c1135bf84ece99c leandrookamada <leandrolobatokmd@gmail.com> 1750016278 -0300	commit: apagando linktree
+4b1d1955e7e57da455cb460d4c1135bf84ece99c 68eee67d32552016d7b3bdf30f24a4168c000428 leandrookamada <leandrolobatokmd@gmail.com> 1750017140 -0300	commit: postando a pasta linktree no local certo
+68eee67d32552016d7b3bdf30f24a4168c000428 571962ae5778519bb302f78da7dbecd6b078ae9f leandrookamada <leandrolobatokmd@gmail.com> 1750097197 -0300	commit: Remove submódulo antigo linktree
+571962ae5778519bb302f78da7dbecd6b078ae9f 62ddad255b74f2c2b18b1f1019bddd2477ddf0d7 leandrookamada <leandrolobatokmd@gmail.com> 1750097296 -0300	commit: Corrige estrutura e adiciona projeto linktree corretamente
+62ddad255b74f2c2b18b1f1019bddd2477ddf0d7 62ddad255b74f2c2b18b1f1019bddd2477ddf0d7 leandrookamada <leandrolobatokmd@gmail.com> 1750099807 -0300	reset: moving to HEAD

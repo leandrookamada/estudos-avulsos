@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(73, 73, 73);
+  color: white;
+  font-family: sans-serif;
+  width: 96%;
+  margin: auto;
+
+  background-image: url(imagens/bg.jpg);
+  background-repeat: no-repeat;
+}
+/*.png-logo {
+  width: 200px;
+  flex: content;
+}
+img {
+  display: flex;
+}*/
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.png-html {
+  float: left;
+}
+
+.png-css {
+  float: right;
+}

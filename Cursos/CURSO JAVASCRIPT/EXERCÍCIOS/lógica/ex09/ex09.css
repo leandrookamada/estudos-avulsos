@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --color1: #111111; /* Cor de contraste */
+  --color2: #f8f7f3; /* Cor princial */
+  --color3: #4c0192; /* Textos */
+  --color4: #cffe00; /* Destaques e botôes */
+
+  --fonttitulo: "Special Gothic Expanded One", sans-serif;
+  --fonttexto: "Bebas Neue", sans-serif;
+  --fontsubtexto: "Oswald", sans-serif;
+}
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  height: 100vh;
+  background-color: var(--color1);
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1em;
+}
+.header_nav_ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+
+  min-width: 60vw;
+  min-height: 12vh;
+  background-color: var(--color3);
+  border-radius: 0px 0px 2em 2em;
+}
+.header_nav_ul_li_button {
+  font-family: var(--fonttexto);
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  background-color: var(--color3);
+
+  padding: 0.625em;
+  margin: 1em;
+  border: 2px solid var(--color1);
+  border-radius: 2em;
+}
+.header_nav_ul_li_button:hover {
+  background-color: var(--color4);
+  color: var(--color3);
+  border: 2px solid var(--color1);
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 78%;
+}
+.main_section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-direction: column;
+
+  min-width: 40vw;
+  min-height: 35vh;
+  padding: 1em 2em;
+  background-color: var(--color3);
+
+  border-radius: 1.1em;
+}
+.main_section_div_h1 {
+  font-family: var(--fonttitulo);
+  color: var(--color4);
+  font-size: 4rem;
+}
+.main_section_h2 {
+  font-family: var(--fonttitulo);
+  color: var(--color4);
+}
+.main_section_nav {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  font-family: var(--fontsubtexto);
+}
+.main_section_nav button {
+  background-color: var(--color1);
+  color: var(--color4);
+  padding: 1em;
+  border-radius: 1.1em;
+  border: 0px;
+  min-width: 10vw;
+}

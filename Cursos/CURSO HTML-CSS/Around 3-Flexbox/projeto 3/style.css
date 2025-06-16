@@ -1,0 +1,151 @@
+:root {
+  --color1: #808080;
+  --color2: #656565;
+  --color3: #4b4b4b;
+  --color4: #303030;
+  --color5: #151515;
+  --color6: #ccff33;
+  --corfonte: #ffff;
+
+  --fonte1: Helvetica, arial;
+  --fonte2: Courier, arial;
+  --fonte3: Verdana, arial;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color5);
+  margin: 0px;
+  padding: 0px;
+  color: var(--corfonte);
+}
+header {
+  width: 99.3vw;
+  height: 15vh;
+  margin: 0px;
+  padding: 5px;
+
+  font-family: var(--fonte1);
+
+  display: flex;
+  overflow: hidden;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border-bottom: 1px solid var(--color1);
+  box-shadow: 0px 5px #151515;
+}
+.header_h1 {
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+.hearde_ul {
+  text-decoration: none;
+  display: flex;
+  margin: 10px 5px;
+  padding: 20px;
+}
+.header_ul_li {
+  list-style-type: none;
+  display: inline-block;
+  border-radius: 20%;
+  text-align: center;
+  margin: 10px 5px;
+  padding: 20px;
+}
+.header_ul_li:hover {
+  background-color: var(--color6);
+  box-shadow: 5px 5px 10px var(--color3);
+}
+.header_ul_li a {
+  text-decoration: none;
+  color: var(--corfonte);
+}
+main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0px;
+  padding: 0px;
+
+  font-family: var(--fonte1);
+}
+.main_h1 {
+  font-size: 40px;
+  margin: 40px;
+}
+.main_div {
+  /* Sessão responsável por todos os cards */
+  display: flex;
+  flex: 1;
+  gap: 20px; /* Gap entre um card e outro */
+  flex-flow: row;
+}
+.main_section {
+  /* Sessão responsável por cada card separadamente */
+  background-color: var(--color3);
+
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  flex: 1;
+
+  padding: 20px;
+
+  border-radius: 20px;
+  box-shadow: #303030;
+}
+.main_section_h2-p {
+  /* sessão responsãvel pelo preço e pelo "/mês" ao lado dele */
+  display: flex;
+  flex-flow: row;
+  align-items: first baseline;
+  margin: 15px 0px;
+  gap: 3px;
+
+  letter-spacing: 2px; /* É usado para determinar o espaçamento entre as letras*/
+}
+.main_section_h2 {
+  /* Sessão responsável pelo título de cima*/
+  border-bottom: solid 1px var(--color6);
+  padding-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.main_section_ul {
+  padding: 10px 0px 10px 16px;
+  font-size: small;
+  margin-bottom: 35px;
+}
+.main_section_ul li {
+  line-height: 1.8em;
+}
+.main_section_ul li::marker {
+  color: var(--color6);
+}
+.main_section_h3 {
+  background-color: var(--color6);
+  text-align: center;
+
+  height: 40px;
+  width: 200px;
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.main_section_h3 a {
+  text-decoration: none;
+  color: var(--corfonte);
+}
+.main_section_h3:hover {
+  background-color: var(--color4);
+  box-shadow: 5px 5px 10px var(--color5);
+}

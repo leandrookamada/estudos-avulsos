@@ -1,0 +1,77 @@
+.main {
+  background-color: #30425c;
+  border-radius: 5em;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+
+  min-width: 30vw;
+  height: auto;
+  padding: 2em;
+  gap: 10px;
+}
+.main img {
+  height: 5em;
+}
+.main h1 {
+  font-size: 1.2rem;
+}
+.main_form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 10px;
+  width: 100%;
+}
+.main_form_label {
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+.alcool {
+  width: 80%;
+  height: 2em;
+  padding: 1em;
+
+  border: 2px solid #22272e;
+  border-radius: 5px;
+}
+.gasolina {
+  width: 80%;
+  height: 2em;
+  padding: 1em;
+
+  border: 2px solid #22272e;
+  border-radius: 5px;
+}
+.main_form_button {
+  width: 80%;
+  height: 2em;
+  padding: 1em;
+  border-radius: 5px;
+  border: 2px solid #22272e;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.section {
+  background-color: rgba(0, 128, 0, 0.611);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 1em;
+  padding: 0.625em;
+  gap: 0.625em;
+}
+.section_h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+.section_span {
+  text-decoration: double 1px black;
+}
