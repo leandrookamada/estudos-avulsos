@@ -1,0 +1,64 @@
+🧠 ESTRUTURA BASE
+
+<!DOCTYPE html>: topo do documento – define o tipo do documento como HTML5.
+<html>: raiz do documento – envolve todo o conteúdo.
+<head>: dentro do <html>, antes do <body> – contém metadados e configurações da página.
+<body>: dentro do <html>, após o <head> – onde vai todo o conteúdo visível da página.
+
+🧩 HEAD – Metadados e links
+
+<title>: dentro do <head> – define o título que aparece na aba do navegador.
+<meta>: dentro do <head> – define charset, viewport, SEO, etc.
+<link>: dentro do <head> – conecta arquivos externos (CSS, favicon).
+<style>: dentro do <head> ou <body> – insere CSS interno (prefira no <head>).
+<script>: idealmente antes do </body> – adiciona JavaScript.
+
+📄 ESTRUTURA DO CONTEÚDO
+
+<header>: topo de uma página ou seção – para logo, título, navegação.
+<nav>: dentro do <header> ou separado – para menus de navegação.
+<main>: dentro do <body> – representa o conteúdo principal.
+<section>: dentro do <main> – separa blocos temáticos de conteúdo.
+<article>: dentro de uma <section> ou sozinho – para conteúdo independente (post, card).
+<aside>: ao lado do <main> ou dentro de seções – conteúdo complementar (banners, links).
+<footer>: final da página ou seção – informações de rodapé.
+
+🧱 TEXTO E TÍTULOS
+
+<h1> até <h6>: dentro de <section>, <article>, <main> – títulos por nível (h1 mais importante).
+<p>: dentro de <section>, <article>, etc – parágrafos de texto.
+<span>: dentro de qualquer texto – para estilizar partes pequenas de texto.
+<strong>: dentro de textos – destaca algo com importância (semântica de negrito).
+<em>: dentro de textos – enfatiza algo (semântica de itálico).
+<br>: dentro de <p> ou similar – quebra de linha (use com moderação).
+<hr>: entre seções – linha horizontal para separar conteúdo.
+
+📋 LISTAS
+
+<ul>: onde há listas não ordenadas – lista com marcadores.
+<ol>: onde há listas ordenadas – lista numerada.
+<li>: dentro de <ul> ou <ol> – item da lista.
+
+🔗 LINKS E MÍDIA
+
+<a>: dentro de qualquer conteúdo – para criar links.
+<img>: onde for necessário exibir imagem – sempre com atributo alt.
+<figure>: envolve <img> – para imagem com legenda.
+<figcaption>: dentro de <figure> – legenda da imagem.
+<video> / <audio>: onde precisar mostrar mídia – players de vídeo/áudio.
+
+🧰 FORMULÁRIOS
+
+<form>: onde há entrada de dados – formulário completo.
+<input>: dentro de <form> – entrada de texto, checkbox, etc.
+<label>: dentro de <form> – rótulo para um input.
+<textarea>: dentro de <form> – área para texto longo.
+<button>: dentro de <form> ou sozinho – botão clicável.
+<select> / <option>: dentro de <form> – listas suspensas.
+
+💡 OUTRAS
+
+<div>: em qualquer lugar – para agrupar conteúdo sem semântica específica.
+<span>: em qualquer lugar – para estilizar conteúdo inline.
+<details> / <summary>: onde quiser conteúdo expansível.
+<table> / <thead> / <tbody> / <tr> / <td> / <th>: onde houver tabelas de dados.

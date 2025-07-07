@@ -1,0 +1,66 @@
+/*body>main#centro>ul>li.contato>div.imagens=div.usarname(>h2.nome=p.email)=div.icones*/
+body {
+  background-color: aqua;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  color: #385555;
+  text-align: center;
+}
+ul {
+  margin: 0px;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-inline: hidden;
+  width: 35vw;
+  height: 70vh;
+}
+li:hover {
+  background-color: #e8e8e8;
+}
+.contato {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: white;
+  border-top: 1px solid #eee;
+  padding: 10px;
+  gap: 10px;
+}
+li.contato .imagem img {
+  border-radius: 50%;
+  width: 80px; /* por ser o maior flex item dentro da classe contato, ele é responsável por ditar o tamanho que a classe vai receber*/
+}
+li.contato div.username {
+  flex-grow: 1;
+  align-self: start;
+}
+li.contato div.username .nome {
+  font-size: larger;
+  margin: 0px;
+}
+li.contato div.username .email {
+  margin: 0px;
+  color: #aaa;
+}
+.icones {
+  display: flex;
+  justify-content: center;
+}
+.icones a {
+  align-items: center;
+  display: none;
+  opacity: 0.3;
+  padding: 0px 7px;
+}
+li:hover .icones a {
+  display: flex;
+}

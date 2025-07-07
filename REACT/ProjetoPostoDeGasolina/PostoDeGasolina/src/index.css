@@ -1,0 +1,15 @@
+* {
+  margin: 0px auto;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #22272e;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 1em;
+}

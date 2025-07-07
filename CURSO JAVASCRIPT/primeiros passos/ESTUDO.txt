@@ -1,0 +1,126 @@
+**GUIA COMPLETO DE JAVASCRIPT (BÁSICO AO AVANÇADO)**
+
+---
+
+# PARTE 1: JAVASCRIPT NO FRONT-END
+
+## 1. Fundamentos do JavaScript
+- Comentários (`//` e `/* */`)
+- Declaração de variáveis (`var`, `let`, `const`)
+- Tipos de dados (string, number, boolean, null, undefined, symbol, object)
+- Operadores (aritméticos, lógicos, relacionais, atribuição)
+- Estruturas de controle (if/else, switch, for, while, do...while)
+- Funções (declaração, expressão, arrow function)
+- Escopo (local, global, de bloco)
+- Hoisting
+- Truthy e Falsy
+- Template literals (`` `Texto ${variavel}` ``)
+
+## 2. Manipulação do DOM
+- `document.querySelector`, `getElementById`, etc.
+- Modificar texto, HTML, estilos e atributos
+- Criar e remover elementos
+- Trabalhar com classes CSS (add, remove, toggle)
+
+## 3. Eventos
+- `addEventListener`
+- Eventos comuns: click, submit, input, change, keydown, etc.
+- Propagação de eventos (bubbling e capturing)
+
+## 4. Formulários e Validação
+- Capturar valores de campos
+- Validar dados com JS
+- Prevenir comportamento padrão (`event.preventDefault()`)
+
+## 5. Armazenamento no navegador
+- `localStorage`
+- `sessionStorage`
+- Cookies (básico)
+
+## 6. Ajax e Fetch API
+- Requisições assíncronas com `fetch()`
+- Manipulação de JSON
+- Tratamento de erros com `.catch()`
+
+## 7. Promises e Async/Await
+- Criar e usar Promises
+- `async` e `await`
+
+## 8. ES6+ (Modern JavaScript)
+- Desestruturação de objetos e arrays
+- Rest e Spread
+- Módulos ES6 (`import`, `export`)
+- Classes e herança
+- Sets e Maps
+- Optional chaining (`?.`)
+
+## 9. Frameworks e Bibliotecas
+- DOM com jQuery (opcional)
+- Manipulação com frameworks: React, Vue, Angular (introdução)
+
+---
+
+# PARTE 2: JAVASCRIPT NO BACK-END (Node.js)
+
+## 1. Introdução ao Node.js
+- Instalação e uso do Node
+- Criar scripts com Node (arquivo `.js` executado no terminal)
+- `console.log`, `require`, `module.exports`
+
+## 2. Gerenciamento de pacotes com NPM
+- `package.json`
+- Instalar pacotes (`npm install nome`)
+- Scripts (`npm run`)
+
+## 3. Módulos e Arquitetura
+- Módulos internos (fs, path, os)
+- Criar módulos próprios
+- Trabalhar com arquivos (ler, escrever)
+
+## 4. Servidores HTTP com Node
+- Criar servidor com `http.createServer`
+- Manipular requisições e respostas
+- Servir arquivos estáticos
+
+## 5. Express.js
+- Instalar e configurar
+- Criar rotas (GET, POST, PUT, DELETE)
+- Middleware
+- Parâmetros e query strings
+
+## 6. Trabalhar com APIs
+- Criar APIs REST com Express
+- Enviar e receber JSON
+- Validar dados com middlewares (como `express-validator`)
+
+## 7. Banco de Dados
+- Conectar com MongoDB (via Mongoose)
+- CRUD básico
+- Outros bancos: PostgreSQL, MySQL (via Sequelize, knex, etc)
+
+## 8. Autenticação e Segurança
+- JWT (JSON Web Token)
+- Middleware de autenticação
+- Proteção contra XSS e CSRF (helmet, cors)
+
+## 9. Deploy
+- Hospedar com Heroku, Vercel, Railway, etc
+- Variáveis de ambiente
+- Configurar scripts de start
+
+## 10. Testes
+- Testes unitários (Jest, Mocha)
+- Testes de integração (Supertest)
+
+---
+
+# DICAS FINAIS
+- Use sempre o console do navegador para testes rápidos
+- Ferramentas: VS Code, Extensões, Prettier, ESLint
+- Sites para aprender: MDN Web Docs, W3Schools, FreeCodeCamp
+- Pratique resolvendo desafios em sites como HackerRank, CodeWars, LeetCode
+
+---
+
+**FIM DO GUIA**
+

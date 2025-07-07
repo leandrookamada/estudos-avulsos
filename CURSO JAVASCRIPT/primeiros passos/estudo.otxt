@@ -1,0 +1,59 @@
+TODOS OS VALORES INSERIDOS PELO USUÁRIO DENTRO DE UM 'ALTERT' É UMA STRING.
+Dito issom para transformar os valores em números teremos 3 alternativas:
+----> Number()      == não pode receber qualquer caracter que responde Nan("not a number")
+----> parseint()    == descarta o que for string e responde um número inteiro e apenas os números até ser impedido pela próxima string
+----> parsefloat()  == descarta o que for string e responde um número com casa decial e apenas os números até ser impedido pela próxima string
+
+
+No JavaScript os operadores aritmédicos são:
+"+"  = soma;
+"-"  = subtração;
+"*"  = multiplicação;
+"/"  = divisão:
+"%"  = módulo(resto);
+"**" = exponencial;
+"++" = incremento (adiciona um);
+"--" = decremento (retira um);
+
+
+Semelhantemente ao C++, as operações e as ações do texto seguem a regra dos parenteses, exemplo:
+alert("O número escolhido é" (number1 + number2))
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+OPERADORES DE COMPARAÇÃO:
+==    ->  (Verifica se dois valores ssão iguais)
+===   ->  (compara se dois valores são iguais e do mesmo tipo.)
+!=    ->  (compara se dois valores são diferentes)
+!==   ->  (compara se dois valores são diferentes e de tipos diferentes)
+>     ->  (maior que)
+<     ->  (menor que)
+>=    ->  (maior ou igual a)
+<=    ->  (menor ou igual a)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+PROMPTS DE SAÍDA:
+alert()   -> Mostra uma janela de aviso;        NÃO RETORNA VALOR
+confirm() -> Mostra uma janela com OK (TRUE) ou CANCELE(FALSE);         RETORNA TRUE OU FALSE 
+prompt()  -> Mostra uma janela para receber um valor que será digitado pelo usuário. O valor digitado será SEMPRE SALVO COMO STRING     RETORNA VALOR
+console.log() -> Mostra a mensagem no console do navegador (f12). Usada principalmente para debug           NÃO RETORNA VALOR 
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Objetos são estruturas de dados que assim como um array vai armazenar alguma informação interna 
+
+---- Objeto literal {}
+---- Objeto construtor new Object()
+
+O objeto é uma coleção de propriedades onde cada uma das propriedades é compotsa por um chave(nome) + um valor, podendo ser string, number ou const
+Quando temos alguma função dentro de um objeto, chamamos essa função de método. Existem duas formas de chamar um um valor de uma chave, a primeira 
+e mais usada é atras de um ponto, exemplo console.log(chave.valor). ou tbm podemos chamar através de uma colchete [], ultilizamos essa forma quando 
+tivermos uma chave dinâmina (armazenada em uma variável por exemplo) ou tiver espaço ou caracteres especiais.
