@@ -5,19 +5,28 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+.main {
+  display: flex;
 
+  justify-content: start;
+  align-items: flex-start;
+}
+.main_div_div_form_h2 {
+  font-size: 1.5rem;
+}
+.main_div_div_form_h2_label {
+  font-size: 1.2rem;
+}
+.main_div_div_form_div {
+  background-color: #fffff;
+  width: full;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.1rem;
+
+  justify-content: start;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
