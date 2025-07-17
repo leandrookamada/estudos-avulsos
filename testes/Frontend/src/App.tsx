@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 const Questionario = [
@@ -64,13 +64,14 @@ const Questionario = [
 ];
 
 export default function () {
-  const [resposta, setResposta] = useState<{ [key: number]: string }>({});
+  const [resposta, setResposta] = useState<{ [key: number]: number }>({});
+
   const [etapaAtual, setEtapaAtual] = useState(0);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setResposta({
       ...resposta,
-      [Questionario[etapaAtual].id]: e.target.value,
+      [Questionario[etapaAtual].id]: parseInt(e.target.value, 10),
     });
   };
   const avancar = () => {
@@ -83,23 +84,32 @@ export default function () {
       setEtapaAtual(etapaAtual - 1);
     }
   };
-  const handleSubmit = async (e: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = async (
+    /*aqui eu estou dizendo que a função retorna uma "promise<T>" */ e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://local-host:8000.api.respostas", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(resposta),
-      });
+      const response = await /* espera a promise<T> */ fetch(
+        "http://localhost:8000/api/respostas",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ respostas: resposta }),
+        }
+      );
       if (!response.ok) {
-        alert("Problema ao enviar formulário");
+        alert("Erro no status HTTP." + response.status);
       }
-      alert("Formulário enviado");
-    } catch {
-      alert("Problema ao enviar formulário");
-      console.log("Erro ao enviar formulário: ", Error);
+      alert("Status HTTP positivo");
+      const data = await response.json();
+      alert(JSON.stringify(data));
+
+      alert("deu certo, graças a Deus e a média é:" + data.media);
+    } catch (err) {
+      alert("O problema está no catch");
+      console.error("Erro ao enviar formulário:", err);
     }
   };
   return (
@@ -125,9 +135,9 @@ export default function () {
                     type="radio"
                     name={`resposta-${etapaAtual}`}
                     value={valor}
-                    checked={
-                      resposta[Questionario[etapaAtual].id] === valor.toString()
-                    }
+                    // checked={
+                    //   resposta[Questionario[etapaAtual].id] === valor.toNumber()
+                    // }
                     onChange={handleChange}
                     className="w-5 h-5"
                   />
