@@ -60,8 +60,7 @@ const Questionario = [
       "Sinto que não tenho com quem contar ou conversar no ambiente de trabalho.",
   },
 ];
-
-export default function () {
+function Formulario() {
   const [resposta, setResposta] = useState<{ [key: number]: number }>({});
 
   const [etapaAtual, setEtapaAtual] = useState(0);
@@ -202,3 +201,4 @@ export default function () {
     </main>
   );
 }
+export default Formulario;
